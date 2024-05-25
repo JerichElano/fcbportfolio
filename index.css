@@ -1,0 +1,57 @@
+/* Universal selector */
+* {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Type selector */
+h1, p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ID selector */
+#profile {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='479' height='57.5' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='9.9' stroke-opacity='0.65'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+footer {
+    background-color: #6d6d6d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Class selector */
+.fa-globe, .fa-facebook, .fa-twitter, .fa-instagram, 
+.fa-tiktok, .fa-youtube {
+    font-size: 25px;
+    color: white;
+    /* top, right, bottom, left */
+    margin: 0 10px 0 10px;
+}
+
+.fa-globe:hover, .fa-facebook:hover, .fa-twitter:hover, 
+.fa-instagram:hover, .fa-tiktok:hover, .fa-youtube:hover {
+    color: bisque;
+}
+
+#landing {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
