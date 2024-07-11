@@ -83,6 +83,7 @@ nav {
     background-color: var(--white);
     padding: 0 10%;
     width: 100%;
+    z-index: 1;
 }
 
 .navContainer {
@@ -134,6 +135,11 @@ h1 {
 
 
 /* Profile */
+
+.profile {
+    background-color: #fb9099;
+    height: 100vh;
+}
 
 #profile {
     display: grid;
@@ -201,76 +207,186 @@ h1 {
 
 /* About */
 
+.about {
+    background-color: gray;
+    height: 100vh;
+    padding-top: 5%;
+}
+
 #about {
     position: relative;
-    padding-top: 20rem;
 }
   
-.about-containers {
+.aboutContainers {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
-  
-.about-details-container {
-    justify-content: center;
-    flex-direction: column;
-}
-  
-.about-containers,
-.about-details-container {
+ 
+.textContainer {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textContainer p {
+    width: 80%;
+    text-align: center;
 }
   
-  .about-pic {
+.aboutContainers {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* .arrow {
+position: absolute;
+right: -5rem;
+bottom: 2.5rem;
+} */
+  
+.detailsContainerLeft {
+    padding: 1.5rem;
+    flex: .3;
+    background: white;
     border-radius: 2rem;
-  }
-  
-  .arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-  }
-  
-  .details-container {
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: left;
+}
+
+.detailsContainerRight {
     padding: 1.5rem;
     flex: 1;
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
-    text-align: center;
-  }
-  
-  .section-container {
-    gap: 4rem;
-    height: 80%;
-  }
-  
-  .section__pic-container {
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-  }
-  
-  /* EXPERIENCE SECTION */
-  
-  #experience {
+    text-align: left;
+}
+
+/* End of About */
+
+
+
+/* auto scroll */
+
+.autoScrollLeft, .autoScrollRight {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    transform: rotate(-1deg); 
+    margin-bottom: -40px; 
+}
+
+.autoScrollRight {
+    justify-content: end;
+    align-items: start;
+}
+
+.slider, .autoScrollRight .slider {
+    height: 100px;
+    margin: 0;
     position: relative;
-  }
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.autoScrollRight .slider {
+    justify-content: end;
+    align-items: start;
+}
+
+.slide-track,
+.autoScrollRight .slide-track {
+    display: flex;
+    width: 100%;
+    animation: scrollRight 50s linear infinite;
+}
+
+.autoScrollRight .slide-track {
+    animation: scrollLeft 50s linear infinite;
+}
+
+/* Fast speed animations */
+@keyframes scrollRightFast {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(-6280px);
+    }
+}
+
+@keyframes scrollLeftFast {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(628px);
+    }
+}
+
+
+@keyframes scrollRight {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(-628px);
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(628px);
+    }
+}
+
+.slide, .autoScrollRight .slide {
+    height: 110px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    perspective: 100px;
+}
+
+.autoScrollLeft .slider .slide img,
+.autoScrollRight .slider .slide img {
+    width: 100%;
+}
+
+/* End of auto scroll */
+
+
+
+/* Experience */
   
-  .experience-sub-title {
+#experience {
+    position: relative;
+}
+  
+.experience-sub-title {
     color: rgb(85, 85, 85);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
-  }
+}
   
-  .experience-details-container {
+.experience-details-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
+}
   
   .article-container {
     display: flex;
