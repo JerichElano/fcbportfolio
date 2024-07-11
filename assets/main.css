@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Satoshi", sans-serif;
-}
-
 :root {
     --big-stone-black: #112034;
     --wedgewood-blue: #457b9d;
@@ -16,37 +9,80 @@
     --amaranth-light-red: #fb9099;
     --white: #ffffff;
     --black: #000000;
+
+    --main-font: "Satoshi", sans-serif;
+    --secondary-font: "Oswald", sans-serif;
 }
 
-.btn {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+
+
+/* Buttons */
+
+.btnContainer {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: var(--amaranth-red);
+    gap: 1rem
+}
+  
+.btn {
     text-decoration: none;
-    color: var(--frost-white);
     font-weight: 500;
-    font-size: 15px;
-    padding: 6px 20px;
-    transition: 0.5s;
-    border: 1px solid rgba(var(--big-stone-black), 0.8);
-    border-radius: 15px;
+    transition: all 300ms ease;
+    padding: .5rem 1rem;
+    width: auto;
+    border-radius: 2rem;
+}
+  
+.btnColor1,
+.btnColor2 {
+    border: var(--big-stone-black) 0.1rem solid;
+}
+  
+.btnColor1:hover,
+.btnColor2:hover {
+    cursor: pointer;
+}
+  
+.btnColor1,
+.btnColor2:hover {
+    background: var(--amaranth-red);
+    color: var(--white);
+}
+  
+.btnColor1:hover {
+    background: var(--aqua-island-light-blue);
+    color: var(--big-stone-black);
+}
+  
+.btnColor2 {
+    background: none;
 }
 
-.btn:hover {
-    color: var(--bl);
-    background-color: var(--amaranth-light-red);
+.btnContainer {
+    gap: 1rem;
 }
 
-/* Start of Nav */
+/* End of Buttons */
+
+
+/* Nav */
 
 nav {
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 80px;
-    background-color: var(--frost-white);
-    padding: 0 5%;
+    background-color: var(--white);
+    padding: 0 10%;
+    width: 100%;
 }
 
 .navContainer {
@@ -56,15 +92,11 @@ nav {
     flex-grow: 1;
 }
 
-.navContainer .logo {
-    padding-top: 8px;
-}
-
 .navContainer img {
-    height: 3rem;
+    height: 5rem;
 }
 
-.navContainer .menu a {
+.navContainer .navLinks a {
     text-decoration: none;
     margin-right: 40px;
     color: var(--big-stone-black);
@@ -73,26 +105,268 @@ nav {
     /* transition: 0.5s; */
 }
 
-.btnContainer {
-    right: 0;
-    justify-content: flex-end;
-}
-
 /* End of Nav */
 
-/* index */
 
-.heroContainer {
+
+/* Sections */
+
+section {
+    padding-top: 12vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+  
+.sectionContainer {
+    display: flex;
+}
+
+h1 {
+    font-family: var(--secondary-font), sans-serif;
+    font-size: 100px;
+    white-space: nowrap;
+}
+
+/* End of Sections */
+  
+
+
+/* Profile */
+
+#profile {
     display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 10px; 
-    height: 100vh;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    gap: 0;
+    height: 80vh;
+    margin-left: 250px;
 }
 
-.heroContainer h1 {
-    font-family: "Oswald", sans-serif;
-    font-size: 120px;
+.sectionPicContainer {
+    display: grid;
+    height: 550px;
+    margin: auto;
+    justify-content: center;
 }
-/* End of index */
+
+.sectionText {
+    margin-top: 10%;
+    align-self: center;
+    text-align: left;
+}
+
+.sectionParLeft {
+    text-align: left;
+    align-items: center;
+}
+
+.sectionParCenter {
+    text-align: center;
+    align-items: center;
+}
+
+.sectionText .btnContainer {
+    justify-content: left;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socialsContainer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* End of Profile */
+
+
+
+/* Icons */
+
+.icon {
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+/* End of Icons */
+
+
+
+/* About */
+
+#about {
+    position: relative;
+    padding-top: 20rem;
+}
+  
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+  
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+  
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+  
+  .about-pic {
+    border-radius: 2rem;
+  }
+  
+  .arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+  }
+  
+  .details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+  }
+  
+  .section-container {
+    gap: 4rem;
+    height: 80%;
+  }
+  
+  .section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+  }
+  
+  /* EXPERIENCE SECTION */
+  
+  #experience {
+    position: relative;
+  }
+  
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+  
+  article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+  
+  article .icon {
+    cursor: default;
+  }
+  
+  /* PROJECTS SECTION */
+  
+  #projects {
+    position: relative;
+  }
+  
+  .color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+  }
+  
+  .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .project-title {
+    margin: 1rem;
+    color: black;
+  }
+  
+  .project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+  }
+  
+  /* CONTACT */
+  
+  #contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  
+  .contact-info-container p {
+    font-size: larger;
+  }
+  
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+  
+  /* FOOTER SECTION */
+  
+  footer {
+    height: 26vh;
+    margin: 0 1rem;
+  }
+  
+  footer p {
+    text-align: center;
+  }
+  
