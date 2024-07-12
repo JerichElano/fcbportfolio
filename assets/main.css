@@ -10,6 +10,12 @@
     --white: #ffffff;
     --black: #000000;
 
+    --html: #ec9853;
+    --css: #1a0af8;
+    --python: #095e01;
+    --cpp: #f63232;
+
+
     --main-font: "Satoshi", sans-serif;
     --secondary-font: "Oswald", sans-serif;
 }
@@ -137,7 +143,7 @@ h1 {
 /* Profile */
 
 .profile {
-    background-color: #fb9099;
+    background-color: #f1f1f1;
     height: 100vh;
 }
 
@@ -208,9 +214,23 @@ h1 {
 /* About */
 
 .about {
-    background-color: gray;
-    height: 100vh;
+	background: linear-gradient(-45deg, #a8dadc, #f4fbf1, #457b9d);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
     padding-top: 5%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #about {
@@ -251,20 +271,18 @@ bottom: 2.5rem;
 .detailsContainerLeft {
     padding: 1.5rem;
     flex: .3;
-    background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border-color: rgba(163, 163, 163, 0.363);
     text-align: left;
 }
 
 .detailsContainerRight {
     padding: 1.5rem;
     flex: 1;
-    background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border-color: rgba(163, 163, 163, 0.363);
     text-align: left;
 }
 
@@ -274,11 +292,15 @@ bottom: 2.5rem;
 
 /* auto scroll */
 
+.autoScrollContainer {
+    margin: 15% -13%;
+}
+
 .autoScrollLeft, .autoScrollRight {
     height: 100px;
     display: grid;
     place-items: center;
-    transform: rotate(-1deg); 
+    transform: rotate(-3deg); 
     margin-bottom: -40px; 
 }
 
@@ -314,7 +336,7 @@ bottom: 2.5rem;
 }
 
 /* Fast speed animations */
-@keyframes scrollRightFast {
+/* @keyframes scrollRightFast {
     0% {
         transform: translate(0);
     }
@@ -330,7 +352,7 @@ bottom: 2.5rem;
     100% {
         transform: translateX(628px);
     }
-}
+} */
 
 
 @keyframes scrollRight {
@@ -369,13 +391,98 @@ bottom: 2.5rem;
 
 
 
+/* Project */
+
+.projects {
+    /* background-color: #457b9d; */
+    height: 200vh;
+}
+  
+#projects {
+    position: relative;
+}
+
+.projectDetailContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detailsContainer {
+    padding: 1.5rem;
+    flex: .3;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: left;
+    text-align: center;
+}
+
+.detailsContainer p {
+    margin: .7rem 0 1rem 0;
+}
+  
+.color-container {
+    border-color: var(--big-stone-black);
+    background: var(--white);
+}
+  
+.projectImg {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.tagsContainer {
+    margin: 1rem 0 .5rem 0;
+}
+
+.tags {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 300ms ease;
+    padding: .1rem .4rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.html {
+    background-color: var(--html);
+    color: var(--white);
+}
+
+.css {
+    background-color: var(--css);
+    color: var(--white);
+}
+
+.python {
+    background-color: var(--python);
+    color: var(--white);
+}
+
+.cpp {
+    background-color: var(--cpp);
+    color: var(--white);
+}
+  
+.projectTitle {
+    /* margin-top: 1rem; */
+    color: black;
+}
+
+/* End of Projects */
+
+
 /* Experience */
   
 #experience {
     position: relative;
 }
   
-.experience-sub-title {
+.experienceSubTitle {
     color: rgb(85, 85, 85);
     font-weight: 600;
     font-size: 1.75rem;
@@ -388,7 +495,7 @@ bottom: 2.5rem;
     flex-direction: column;
 }
   
-  .article-container {
+  .articleContainer {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
@@ -408,32 +515,7 @@ bottom: 2.5rem;
     cursor: default;
   }
   
-  /* PROJECTS SECTION */
-  
-  #projects {
-    position: relative;
-  }
-  
-  .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
-  }
-  
-  .project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
-  }
-  
-  .project-title {
-    margin: 1rem;
-    color: black;
-  }
-  
-  .project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
-  }
+
   
   /* CONTACT */
   
