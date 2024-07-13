@@ -89,8 +89,14 @@ p {
     flex-direction: column;
 }
 
-.logo {
-    max-height: 2.5rem;
+.lower .logo {
+    /* max-height: 2rem; */
+    max-width: 20%;
+    height: auto;
+}
+
+.lower .socials-container a {
+    text-decoration: none;
 }
 
 .lower .btn {
@@ -257,7 +263,7 @@ p {
     }
 
     .lower {
-        margin-top: 80%;
+        margin-top: 50%;
     }
 
     .lower .btn {
@@ -267,7 +273,7 @@ p {
     }
 
     .logo {
-        height: 2rem;
+        max-width: 30%;
     }
 
     .fa-linkedin, .fa-facebook, .fa-github {
