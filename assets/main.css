@@ -146,9 +146,13 @@ p {
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.btn:hover {
+.lower .btn:hover {
   box-shadow: inset 200px 100px 0 100px var(--accent2);
   color: var(--frost-white);
+}
+
+.lower p {
+    margin-top: 1rem;
 }
 
 .fa-linkedin, .fa-facebook, .fa-github {
