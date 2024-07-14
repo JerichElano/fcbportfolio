@@ -152,7 +152,7 @@ p {
 }
 
 .lower p {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .fa-linkedin, .fa-facebook, .fa-github {
@@ -259,6 +259,10 @@ p {
 
     .lower .btn {
         margin: 3%;
+    }
+
+    .lower p {
+        margin-top: 2rem;
     }
 
     @keyframes gradient {
