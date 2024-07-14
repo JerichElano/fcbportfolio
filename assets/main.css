@@ -55,6 +55,37 @@ body {
 	}
 }
 
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--frost-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: transform 0.5s ease-out;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.loading-image {
+    max-width: 10rem;
+}
+
+#main-content {
+    display: none;
+    padding: 20px;
+}
+
 .container {
     margin-top: 5%;
     flex: 1;
@@ -134,7 +165,8 @@ p {
 
 /* auto scroll */
 
-.autoScrollLeft, .autoScrollRight {
+.autoScrollLeft, 
+.autoScrollRight {
     position: absolute;
     display: grid;
     place-items: center;
@@ -261,6 +293,10 @@ p {
 }
 
 @media (max-width: 490px) {
+    .loading-image {
+        max-width: 7rem;
+    }
+
     .container {
         margin-top: 25%; 
     }
@@ -310,6 +346,10 @@ p {
 }
 
 @media (max-width: 380px) and (max-width: 667px){
+    .loading-image {
+        max-width: 5rem;
+    }
+
     .container {
         margin-top: 25%; 
     }
