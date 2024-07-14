@@ -61,6 +61,10 @@ body {
     color: var(--frost-white);
 }
 
+.container h1 {
+    text-shadow: 0 0 10px rgb(21, 21, 21);
+}
+
 h1, h2 {
     text-transform: capitalize;
     margin-top: .5rem;
@@ -220,6 +224,18 @@ p {
     .lower .btn {
         margin: 3%;
     }
+
+    @keyframes gradient {
+        0% {
+            background-position: 18% 50%;
+        }
+        50% {
+            background-position: 86% 50%;
+        }
+        100% {
+            background-position: 18% 50%;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -263,7 +279,7 @@ p {
     }
 
     .lower {
-        margin-top: 50%;
+        margin-top: 40%;
     }
 
     .lower .btn {
@@ -278,6 +294,18 @@ p {
 
     .fa-linkedin, .fa-facebook, .fa-github {
         font-size: 22px;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 15% 50%;
+        }
+        50% {
+            background-position: 90% 50%;
+        }
+        100% {
+            background-position: 15% 50%;
+        }
     }
 }
 
