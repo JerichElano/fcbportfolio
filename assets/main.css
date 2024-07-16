@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+    --big-stone-black:  #00000055;
+    --wedgewood-blue: #457b9d;
+    --frost-white: #f4fbf1;
+    --aqua-island-light-blue: #a8dadc;
+
+    --emperor: #4f4f4f;
+    --wild-sand: #f5f5f5;
+    --pickled-bluewood: #334d5c;
+    --bittersweet: #ff6f61;
+
+    --accent: #0c131e;
+    --accent2: #705ada;
+    --white: #fff;
+    --black: #000000;
+
+    --html: #ec9853;
+    --css: #1a0af8;
+    --python: #095e01;
+    --cpp: #f63232;
+
+
+    --main-font: "Satoshi", sans-serif;
+    --secondary-font: "Anton", sans-serif;
+    /* --secondary-font: "Oswald", sans-serif; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+/* Buttons */
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+  
+.btn {
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 300ms ease;
+    padding: .5rem 1rem;
+    width: auto;
+    border-radius: 1rem;
+    z-index: 2;
+}
+  
+.btnColor1,
+.btnColor2 {
+    border: var(--big-stone-black) 0.1rem solid;
+}
+  
+.btnColor1:hover,
+.btnColor2:hover {
+    cursor: pointer;
+}
+  
+.btnColor1,
+.btnColor2:hover {
+    background: var(--bittersweet);
+    color: var(--white);
+}
+  
+.btnColor1:hover {
+    background: var(--bittersweet);
+    border: var(--frost-white) 0.1rem solid;
+}
+  
+.btnColor2 {
+    background: none;
+}
+
+.btnColor2:hover {
+    border: var(--frost-white) 0.1rem solid;
+}
+
+/* End of Buttons */
+
+
+/* Nav */
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    background-color: var(--white);
+    padding: 0 10%;
+    width: 100%;
+    z-index: 3;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.navContainer img {
+    max-height: 5rem;
+}
+
+.navContainer .navLinks a {
+    text-decoration: none;
+    margin-right: 40px;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 15px;
+    /* transition: 0.5s; */
+}
+
+/* End of Nav */
+
+
+
+/* Sections */
+
+section {
+    padding-top: 12vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+  
+.sectionContainer {
+    display: flex;
+}
+
+h1 {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 130px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.sectionText h1 {
+    transform: scaleY(1.3)
+}
+
+/* End of Sections */
+  
+
+
+/* Profile */
+
+.profile {
+    background-color: #f1f1f1;
+    height: 100vh;
+}
+
+#profile {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    gap: 0;
+    height: 80vh;
+    margin-left: 250px;
+}
+
+.sectionPicContainer {
+    display: grid;
+    height: 550px;
+    margin: auto;
+    justify-content: center;
+}
+
+.sectionText {
+    margin-top: 9%;
+    align-self: center;
+    text-align: left;
+}
+
+.sectionParLeft {
+    text-align: left;
+    align-items: center;
+}
+
+.sectionParCenter {
+    text-align: center;
+    align-items: center;
+}
+
+.sectionText .btnContainer {
+    justify-content: left;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socialsContainer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    margin-top: 1rem;
+}
+
+/* End of Profile */
+
+
+
+/* Icons */
+
+#socialsContainer i {
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+.fa-linkedin, .fa-facebook, .fa-github {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--accent);
+    margin: 0 8px 0 8px;
+    transition: color 0.3s ease;
+}
+
+.lowerFooter .fa-linkedin, 
+.lowerFooter .fa-facebook, 
+.lowerFooter .fa-github {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--bittersweet);
+    margin: 0 8px 0 8px;
+    transition: color 0.3s ease;
+}
+
+.fa-linkedin:hover, .fa-facebook:hover, .fa-github:hover {
+    color: var(--bittersweet);
+}
+
+.lowerFooter .fa-linkedin:hover, 
+.lowerFooter .fa-facebook:hover, 
+.lowerFooter .fa-github:hover {
+    color: var(--aqua-island-light-blue);
+}
+
+/* End of Icons */
+
+
+
+/* About */
+
+.about {
+	background: linear-gradient(-49deg, #f5f5f5, #4f4f4f, #f5f5f5);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 110vh;
+    padding-top: 1%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#about {
+    position: relative;
+    text-align: center;
+}
+  
+.aboutContainers {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.aboutContainers h3, h4 {
+    margin-top: 1rem;
+}
+ 
+.textContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textContainer p {
+    width: 80%;
+    text-align: center;
+}
+
+#about .btnContainer {
+    margin-top: 1rem;
+}
+  
+.aboutContainers {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* .arrow {
+position: absolute;
+right: -5rem;
+bottom: 2.5rem;
+} */
+  
+.detailsContainerLeft {
+    padding: 1.5rem;
+    flex: .4;
+    border-radius: 1rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgba(163, 163, 163, 0.363);
+    text-align: left;
+}
+
+.detailsContainerRight {
+    padding: 1.5rem;
+    flex: .6;
+    border-radius: 1rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgba(163, 163, 163, 0.363);
+    text-align: left;
+}
+
+/* End of About */
+
+
+
+/* auto scroll */
+.autoScrollLeft h2,
+.autoScrollRight h2 {
+    text-transform: uppercase;
+    margin-top: .5rem;
+    font-family: var(--secondary-font);
+    font-weight: 200;
+    font-size: 2.3rem;
+    letter-spacing: 0.2em;
+    text-wrap: nowrap;
+    /* transform: scaleY(1.3); */
+}
+
+.autoScrollRight h2 {
+    text-wrap: nowrap;
+    /* transform: scaleY(1.3); */
+    color: transparent;
+    -webkit-text-stroke: 1.4px var(--accent); 
+}
+
+/* .autoScrollContainer {
+    overflow: hidden;
+    margin: 12% 0 7% 0;
+    height: 10rem;
+} */
+
+.autoScrollLeft, .autoScrollRight {
+    /* position: absolute; */
+    display: grid;
+    place-items: center;
+    /* transform: rotate(-2deg);  */
+}
+
+.autoScrollLeft {
+    /* top: -40px;  */
+    height: 100px; 
+    margin-bottom: -10px;
+}
+
+.autoScrollRight {
+    /* bottom: -30px;  */
+    height: 100px;
+    margin-top: -25px;
+}
+
+.autoScrollRight {
+    justify-content: end;
+    align-items: start;
+}
+
+.slider, .autoScrollRight .slider {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.autoScrollRight .slider {
+    justify-content: end;
+    align-items: start;
+}
+
+.slide-track,
+.autoScrollRight .slide-track {
+    display: flex;
+    width: 100%;
+    animation: scrollRight 50s linear infinite;
+}
+
+.autoScrollRight .slide-track {
+    animation: scrollLeft 50s linear infinite;
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(-628px);
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translate(-628px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide, .autoScrollRight .slide {
+    height: 110px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    perspective: 100px;
+}
+
+/* End of auto scroll */
+
+
+
+/* Project */
+
+.projects {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #457b9d; */
+    /* min-height: 150vh; */
+    height: auto;
+    /* min-height: 50rem;
+    max-height: 85rem; */
+    /* max-height: auto; */
+}
+
+.projects .projectDetailContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    /* gap: 1.5rem; */
+    /* margin-bottom: 2rem;
+    margin-top: 2rem; */
+}
+
+.projects .projectDetails {
+    /* flex: 1 1 calc(33.33% - 2rem); */
+    margin: 1rem;
+    /* flex: 20%; */
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    /* justify-content: center; */
+    max-width: 20rem;
+    min-width: 18rem;
+    padding: 1.3rem;
+    background: var(--white);
+    border-radius: 1rem;
+    border: var(--accent) 0.1rem solid;
+    border-color: var(--emperor);
+    text-align: center;
+}
+
+/* @media (max-width: 1024px) {
+    .projects .projectDetails {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+} */
+
+.projects .imageContainer {
+    height: auto;
+    width: auto;
+    min-width: 10rem;
+}
+ 
+.projectImg {
+    border-radius: 1rem;
+    width: 100%;
+    height: 90%;
+}
+ 
+.tagsContainer {
+    margin: 0 0 .5rem 0;
+}
+
+.tags {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 300ms ease;
+    padding: .1rem .4rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.html {
+    background-color: var(--html);
+    color: var(--white);
+}
+
+.css {
+    background-color: var(--css);
+    color: var(--white);
+}
+
+.python {
+    background-color: var(--python);
+    color: var(--white);
+}
+
+.cpp {
+    background-color: var(--cpp);
+    color: var(--white);
+}
+  
+.projectTitle {
+    /* margin-top: 1rem; */
+    color: black;
+}
+
+.projectDetails p {
+    margin: 1rem 0 1rem 0;
+}
+
+/* End of Projects */
+
+
+
+/* Footer */
+
+.footer {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 2rem 5rem;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.upperFooter img {
+    height: 6rem;
+    display: flex;
+    justify-content: left;
+}
+
+.lowerFooter {
+    height: 3rem;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* End of Footer */
